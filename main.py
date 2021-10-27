@@ -1,4 +1,4 @@
-import bs4
+import bs4, sys
 import pandas as pd
 from datetime import datetime
 from tkinter import Tk
@@ -63,6 +63,7 @@ class Window(QtWidgets.QMainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setEnabled(True)
         MainWindow.setFixedSize(200, 180)
+        MainWindow.setWindowIcon(QtGui.QIcon(sys._MEIPASS + "/logo.png"))
         sizePolicy = QtWidgets.QSizePolicy(
             QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -129,7 +130,7 @@ class Window(QtWidgets.QMainWindow):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "RQ Damage View"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "RQLP"))
         self.label.setText(_translate("MainWindow", "Start time:"))
         self.label_2.setText(_translate("MainWindow", "End time:"))
         self.label_3.setText(_translate("MainWindow", "Total damage:"))
